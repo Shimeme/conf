@@ -26,6 +26,17 @@ opt.termguicolors = true
 opt.background = "dark"
 opt.signcolumn = "yes"
 
+vim.cmd [[
+  augroup Transparency
+    autocmd!
+    autocmd VimEnter * hi Normal guibg=NONE ctermbg=NONE
+    autocmd VimEnter * hi NonText guibg=NONE ctermbg=NONE
+    autocmd VimEnter * hi VertSplit guibg=NONE ctermbg=NONE
+  augroup END
+]]
+
+
+
 --backspace
 opt.backspace = "indent,eol,start"
 
